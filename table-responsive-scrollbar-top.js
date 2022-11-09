@@ -1,6 +1,6 @@
 /** add .table-responsive-scrollbar-top functionality
- *  for usage with bootstrap's responsive-table.
- *  just add an additional <div class="responsive-table table-responsive-scrollbar-top"></div> as previous sibling to <div class="responsive-table">...</div>
+ *  for usage with bootstrap's table-responsive.
+ *  just add an additional <div class="table-responsive table-responsive-scrollbar-top"></div> as previous sibling to <div class="table-responsive">...</div>
  */
 window.addEventListener('DOMContentLoaded', function() {
     let mains = document.querySelectorAll('.table-responsive');
