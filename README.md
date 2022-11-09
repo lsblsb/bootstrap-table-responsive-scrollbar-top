@@ -1,5 +1,5 @@
 # bootstrap-table-responsive-scrollbar-top
-## A bootstrap table-responsive extension to simply add an addtional scrollbar at the top of a responsive-table ##
+## A bootstrap table-responsive extension to simply add an additional scrollbar at the top of a responsive-table ##
 
 Requires Bootstrap (responsive-table).
 
