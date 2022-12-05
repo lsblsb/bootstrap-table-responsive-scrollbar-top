@@ -2,7 +2,7 @@
  *  for usage with bootstrap's table-responsive.
  *  just add an additional <div class="table-responsive table-responsive-scrollbar-top"></div> as previous sibling to <div class="table-responsive">...</div>
  */
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     let mains = document.querySelectorAll('.table-responsive:not(.table-responsive-scrollbar-top)');
     if (mains.length > 0) {
         Array.from(mains).forEach(function(main) {
