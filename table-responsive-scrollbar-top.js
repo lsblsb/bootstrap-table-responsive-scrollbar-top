@@ -3,10 +3,10 @@
  *  just add an additional <div class="table-responsive table-responsive-scrollbar-top"></div> as previous sibling to <div class="table-responsive">...</div>
  */
 window.addEventListener('DOMContentLoaded', function() {
-    let mains = document.querySelectorAll('.table-responsive');
+    let mains = document.querySelectorAll('.table-responsive:not(.table-responsive-scrollbar-top)');
     if (mains.length > 0) {
         Array.from(mains).forEach(function(main) {
-            let top = main.previousElementSibling.matches('.table-responsive-scrollbar-top') ? main.previousElementSibling : null;
+            let top = main.previousElementSibling && main.previousElementSibling.matches('.table-responsive-scrollbar-top') ? main.previousElementSibling : null;
             if (top) {
                 let timeout = false;
                 let toggleScrollbar;
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     if (main.offsetWidth < main.scrollWidth) {
                         top.style.display = 'block';
                         top.style.height = (main.offsetHeight - main.clientHeight) + 'px';
-                        top.firstElementChild.style.width = main.scrollWidth + 'px';
+                        top.style.width = main.scrollWidth + 'px';
                         top.firstElementChild.style.width = main.firstElementChild.offsetWidth + 'px';
                     } else {
                         top.style.display = 'revert';
