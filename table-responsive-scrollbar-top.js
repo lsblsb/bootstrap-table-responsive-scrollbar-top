@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         top.style.display = 'block';
                         top.style.height = (main.offsetHeight - main.clientHeight) + 'px';
                         top.firstElementChild.style.width = main.scrollWidth + 'px';
-                        top.firstElementChild.style.height = top.style.height;
+                        top.firstElementChild.style.width = main.firstElementChild.offsetWidth + 'px';
                     } else {
                         top.style.display = 'revert';
                     }
